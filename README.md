@@ -1,5 +1,5 @@
 # grafana-script
-For the steps below  to install the grafana.
+Follow the steps below  to install the grafana using my script
 ## clone the repository
 `` git clone https://github.com/ndakena/grafana-script.git``
 ## Navigate to the folder
