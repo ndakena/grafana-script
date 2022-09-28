@@ -18,7 +18,7 @@ systemctl enable grafana-server
 apt-get install nginx -y
 
 cat << EOF > /etc/nginx/conf.d/grafana.conf
-Server {
+server {
         server_name grafana.example.com;
         listen 80 ;
         access_log /var/log/nginx/grafana.log;
