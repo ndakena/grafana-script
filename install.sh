@@ -18,7 +18,7 @@ systemctl enable grafana-server
 apt-get install nginx -y
 apt install certbot python3-certbot-nginx -y
 
-cat << EOF > /etc/nginx/sites-available/grafana.example.com
+cat << EOF > /etc/nginx/conf.d/grafana.conf
 server {
         server_name grafana.example.com;
         listen 80 ;
