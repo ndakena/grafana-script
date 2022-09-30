@@ -23,5 +23,6 @@ mv grafana.conf /etc/nginx/conf.d/grafana.conf
 nginx -t
 
 systemctl restart nginx
+sudo certbot --nginx -d grafana.example.com
 
 echo "Congratulations, you have successfully installed grafana!"
