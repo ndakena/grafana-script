@@ -12,7 +12,7 @@ Open the the file install.sh with the following command and modify the Server_na
 ``nano install.sh``
 After modifying the server_name, use clrl+x , then type y and hit enter to save the file
 ## Install 
-``./install ``
+``./install.sh ``
 
 ### SSL
 The installation already included certbot plugin for nginx, so, after successful installation, run ``certbot`` and follow the instructions to get SSL for your domain
