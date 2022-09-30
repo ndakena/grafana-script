@@ -18,20 +18,7 @@ systemctl enable grafana-server
 apt-get install nginx -y
 apt install certbot python3-certbot-nginx -y
 
-cat << EOF > /etc/nginx/conf.d/grafana.conf
-server {
-        server_name grafana.example.com;
-        listen 80 ;
-        access_log /var/log/nginx/grafana.log;
-    location / {
-                proxy_pass http://localhost:3000;
-        proxy_set_header Host $http_host;
-                proxy_set_header X-Forwarded-Host $host:$server_port;
-                proxy_set_header X-Forwarded-Server $host;
-                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        }
-}
-EOF
+mv grafana.conf /etc/nginx/conf.d/grafana.conf
 
 nginx -t
 
