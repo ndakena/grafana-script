@@ -6,7 +6,6 @@ apt-get install wget curl gnupg2 apt-transport-https software-properties-common 
 
 wget -q -O - https://packages.grafana.com/gpg.key | apt-key add -
 
-
 echo "deb https://packages.grafana.com/oss/deb stable main" | tee -a /etc/apt/sources.list.d/grafana.list
 
 apt-get update -y
@@ -23,6 +22,9 @@ mv grafana.conf /etc/nginx/conf.d/grafana.conf
 nginx -t
 
 systemctl restart nginx
-sudo certbot --nginx -d grafana.example.com
 
-echo "Congratulations, you have successfully installed grafana!"
+echo "--------------------------------------------------------------------"
+echo "--------------------------------------------------------------------"
+echo "-----Congratulations, you have successfully installed grafana!------"
+echo "--------------------------------------------------------------------"
+echo "--------------------------------------------------------------------"
